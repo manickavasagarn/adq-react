@@ -1,0 +1,28 @@
+.adq-nav{
+    background-color: #fff !important;
+    box-shadow: 0 0 30px rgba(28, 39, 60, 0.08);
+    border-bottom: 1px solid rgba(28, 39, 60, 0.12);
+}
+
+.adq-name{
+    font-weight: 300;
+    font-size:1.2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link{
+    font-size: 0.875rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:  #031b4e;
+    font-weight: 500;
+}
+
+.nav-link.active{
+    color: #5b47fb !important;
+    border-bottom: 2px solid;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}

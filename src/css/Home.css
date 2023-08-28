@@ -1,0 +1,423 @@
+.counter {
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.adq-card {
+    box-shadow: 1px 0px 5px 0px #e2cdcd;
+    border-radius: 5px;
+    border: 1px solid #f6efe3;
+}
+
+.chart-container {
+    height: 600px;
+    /* Set the desired height */
+}
+
+.adq-source {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 10px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.adq-button{
+    background: #ffffff;
+    color: black;
+    box-shadow: none;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    padding: 4px;
+    margin-left: 5px;
+    box-shadow: 1px 0px 5px 0px #e2cdcd;
+}
+
+.adq-button:hover,.adq-button.active{
+    background-color: blue;
+    color: white;
+}
+
+.adq-icon{
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: 'notika-icon';
+    src: url('fonts/notika-icon.eot?qzfrsz');
+    src: url('fonts/notika-icon.eot?qzfrsz#iefix') format('embedded-opentype'),
+        url('fonts/notika-icon.ttf?qzfrsz') format('truetype'),
+        url('fonts/notika-icon.woff?qzfrsz') format('woff'),
+        url('fonts/notika-icon.svg?qzfrsz#notika-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.dataTables_filter,
+.dataTables_length {
+    padding: 20px 15px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.dataTables_filter label,
+.dataTables_length label {
+    font-weight: 400 !important;
+}
+
+.dataTables_length select {
+    margin: 0 8px !important;
+}
+
+.dataTables_filter input,
+.dataTables_filter select,
+.dataTables_length input,
+.dataTables_length select {
+    border: 1px solid #eee !important;
+    height: 35px !important;
+    padding: 7px 15px !important;
+    font-size: 13px !important;
+    border-radius: 2px !important;
+    line-height: 100% !important;
+    background-color: #fff !important;
+    outline: none !important;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+.dataTables_filter input:focus,
+.dataTables_filter select:focus,
+.dataTables_length input:focus,
+.dataTables_length select:focus,
+.dataTables_length option:focus {
+    border: 1px solid blue !important;
+    border-radius: 5px !important;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    width: 40% !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_filter label {
+    width: 100% !important;
+}
+
+.dataTables_filter label:after {
+    content: '\e928' !important;
+    font-family: 'notika-icon' !important;
+    position: absolute !important;
+    font-size: 14px !important;
+    right: 14px !important;
+    top: 8px !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    margin: 0 !important;
+    padding: 0px 0px 0px 10px !important;
+}
+
+.dataTables_filter label {
+    position: relative !important;
+    font-size: 0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:before {
+    content: '\e903';
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:before,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous:before {
+    font-family: 'notika-icon' !important;
+    font-size: 14px !important;
+    line-height: 35px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next,
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous {
+    font-size: 0 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next:before {
+    content: '\e91e' !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:focus,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #00c292 !important;
+    color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0.5em 0em !important;
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50% !important;
+    background-color: #f1f1f1 !important;
+    vertical-align: top !important;
+    color: #7E7E7E !important;
+    margin: 0 2px !important;
+    border: 0 !important;
+    line-height: 21px !important;
+    box-shadow: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:focus {
+    color: white !important;
+    border: 0px solid #ccc !important;
+    background: #00c292 !important;
+}
+
+#data-table-basic {
+    padding: 20px 0px !important;
+    padding-top: 0 !important;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    padding-top: 0px !important;
+}
+
+#data-table-basic_filter label,
+#data-table-basic_length label {
+    margin-bottom: 0px !important;
+    font-size: 14px;
+}
+
+normal-table-list .table {
+    margin-bottom: 0px;
+}
+
+.table.table-sc-ex>tbody>tr>td,
+.table.table-sc-ex>tbody>tr>th,
+.table.table-sc-ex>tfoot>tr>td,
+.table.table-sc-ex>tfoot>tr>th,
+.table.table-sc-ex>thead>tr>td,
+.table.table-sc-ex>thead>tr>th {
+    border-top: 1px solid #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    padding: 15px;
+}
+
+.table.table-bordered>tbody>tr>td,
+.table.table-bordered>tbody>tr>th,
+.table.table-bordered>tfoot>tr>td,
+.table.table-bordered>tfoot>tr>th,
+.table.table-bordered>thead>tr>td,
+.table.table-bordered>thead>tr>th {
+    border: 1px solid #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    padding: 15px;
+}
+
+.table-bordered,
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #F5F5F5;
+}
+
+.table.table-striped>tbody>tr>td,
+.table.table-striped>tbody>tr>th,
+.table.table-striped>tfoot>tr>td,
+.table.table-striped>tfoot>tr>th,
+.table.table-striped>thead>tr>td,
+.table.table-striped>thead>tr>th {
+    border-top: 0px solid #F5F5F5;
+    font-size: 12px;
+    color: #333;
+    padding: 8px;
+}
+
+.table.table-hover>tbody>tr>td,
+.table.table-hover>tbody>tr>th,
+.table.table-hover>tfoot>tr>td,
+.table.table-hover>tfoot>tr>th,
+.table.table-hover>thead>tr>td,
+.table.table-hover>thead>tr>th {
+    border-top: 1px solid #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    padding: 15px 15px;
+}
+
+.table.table-condensed>tbody>tr>td,
+.table.table-condensed>tbody>tr>th,
+.table.table-condensed>tfoot>tr>td,
+.table.table-condensed>tfoot>tr>th,
+.table.table-condensed>thead>tr>td,
+.table.table-condensed>thead>tr>th {
+    border-top: 1px solid #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+}
+
+.table.table-cl>tbody>tr>td,
+.table.table-cl>tbody>tr>th,
+.table.table-cl>tfoot>tr>td,
+.table.table-cl>tfoot>tr>th,
+.table.table-cl>thead>tr>td,
+.table.table-cl>thead>tr>th {
+    border-top: 0px solid #F5F5F5;
+    font-size: 14px;
+    color: #333;
+    padding: 15px;
+}
+
+.table.table-striped>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-sc-ex>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-bordered>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-hover>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-condensed>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-cl>thead>tr>th {
+    border-bottom: 0px solid #ddd;
+}
+
+.table.table-cl>tbody>tr.active>td,
+.table.table-cl>tbody>tr.active>th,
+.table.table-cl>tbody>tr>td.active,
+.table.table-cl>tbody>tr>th.active,
+.table.table-cl>tfoot>tr.active>td,
+.table.table-cl>tfoot>tr.active>th,
+.table.table-cl>tfoot>tr>td.active,
+.table.table-cl>tfoot>tr>th.active,
+.table.table-cl>thead>tr.active>td,
+.table.table-cl>thead>tr.active>th,
+.table.table-cl>thead>tr>td.active,
+.table.table-cl>thead>tr>th.active {
+    background: #00c292;
+    color: #fff;
+}
+
+.table.table-cl>tbody>tr.info>td,
+.table.table-cl>tbody>tr.info>th,
+.table.table-cl>tbody>tr>td.info,
+.table.table-cl>tbody>tr>th.info,
+.table.table-cl>tfoot>tr.info>td,
+.table.table-cl>tfoot>tr.info>th,
+.table.table-cl>tfoot>tr>td.info,
+.table.table-cl>tfoot>tr>th.info,
+.table.table-cl>thead>tr.info>td,
+.table.table-cl>thead>tr.info>th,
+.table.table-cl>thead>tr>td.info,
+.table.table-cl>thead>tr>th.info {
+    background: #fb9678;
+    color: #fff;
+}
+
+.table.table-cl>tbody>tr.warning>td,
+.table.table-cl>tbody>tr.warning>th,
+.table.table-cl>tbody>tr>td.warning,
+.table.table-cl>tbody>tr>th.warning,
+.table.table-cl>tfoot>tr.warning>td,
+.table.table-cl>tfoot>tr.warning>th,
+.table.table-cl>tfoot>tr>td.warning,
+.table.table-cl>tfoot>tr>th.warning,
+.table.table-cl>thead>tr.warning>td,
+.table.table-cl>thead>tr.warning>th,
+.table.table-cl>thead>tr>td.warning,
+.table.table-cl>thead>tr>th.warning {
+    background: #01c0c8;
+    color: #fff;
+}
+
+.table.table-cl>tbody>tr.danger>td,
+.table.table-cl>tbody>tr.danger>th,
+.table.table-cl>tbody>tr>td.danger,
+.table.table-cl>tbody>tr>th.danger,
+.table.table-cl>tfoot>tr.danger>td,
+.table.table-cl>tfoot>tr.danger>th,
+.table.table-cl>tfoot>tr>td.danger,
+.table.table-cl>tfoot>tr>th.danger,
+.table.table-cl>thead>tr.danger>td,
+.table.table-cl>thead>tr.danger>th,
+.table.table-cl>thead>tr>td.danger,
+.table.table-cl>thead>tr>th.danger {
+    background: #ab8ce4;
+    color: #fff;
+}
+
+.table.table-cl>tbody>tr.success>td,
+.table.table-cl>tbody>tr.success>th,
+.table.table-cl>tbody>tr>td.success,
+.table.table-cl>tbody>tr>th.success,
+.table.table-cl>tfoot>tr.success>td,
+.table.table-cl>tfoot>tr.success>th,
+.table.table-cl>tfoot>tr>td.success,
+.table.table-cl>tfoot>tr>th.success,
+.table.table-cl>thead>tr.success>td,
+.table.table-cl>thead>tr.success>th,
+.table.table-cl>thead>tr>td.success,
+.table.table-cl>thead>tr>th.success {
+    background: #e46a76;
+    color: #fff;
+}
+
+.basic-tb-hd p {
+    margin-bottom: 0px;
+}
+
+.basic-tb-hd {
+    margin-bottom: 20px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    font-size: 14px;
+    color: #333;
+}
+
+
+
+.popoverP{
+    margin-bottom: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    
+}
+
+.popoverMore{
+    margin-bottom: 0;
+    font-size:13px;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+    text-align: end;
+    cursor: pointer;
+}
