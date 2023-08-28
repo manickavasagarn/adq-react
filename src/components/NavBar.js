@@ -39,7 +39,7 @@ function NavBar() {
                             <p className='adq-name my-auto'>&nbsp; Ace Data Quality</p>
                         </div>
                     </div>
-                    <div className='col-6'>
+                    <div className='col-7'>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
@@ -72,7 +72,7 @@ function NavBar() {
                             </ul>
                         </div>
                     </div>
-                    <div className='col-3'>
+                    <div className='col-2'>
                         <ul class="navbar-nav  me-3">
                             <li class="nav-item dropdown ms-auto">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
