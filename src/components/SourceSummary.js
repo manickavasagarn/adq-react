@@ -20,8 +20,8 @@ function SourceSummary() {
     padding: "5px 15px 10px 15px",
     lineHeight: " 24px",
     fontSize: "14px",
-    width:"190px",
-    height:"190px",
+    width: "190px",
+    height: "190px",
   }
   useEffect(() => {
     if (tableRef.current && !dataTableRef.current) {
@@ -34,6 +34,9 @@ function SourceSummary() {
       });
 
       dataTableRef.current = dataTableInstance; // Store the DataTable instance
+      if (dataTableRef.current) {
+        dataTableRef.current.order([2, 'asc']).draw();
+    }
     }
   }, []);
 
@@ -49,520 +52,490 @@ function SourceSummary() {
   };
 
   const tableData = [
-    {
-      name: "Tiger Nixon",
-      title: "System Architect",
-      location: "Edinburgh",
-      age: 61,
-      date: "2011/04/25",
-      salary: "$320,800",
-      o: "o",
-    },
-    {
-      name: "Garrett Winters",
-      title: "Accountant",
-      location: "Tokyo",
-      age: 63,
-      date: "2011/07/25",
-      salary: "$170,750",
-      o: "o",
-    },
-    {
-      name: "Ashton Cox",
-      title: "Junior Technical Author",
-      location: "San Francisco",
-      age: 66,
-      date: "2009/01/12",
-      salary: "$86,000",
-      o: "o",
-    },
-    {
-      name: "Cedric Kelly",
-      title: "Senior Javascript Developer",
-      location: "Edinburgh",
-      age: 22,
-      date: "2012/03/29",
-      salary: "$433,060",
-      o: "o",
-    },
-    {
-      name: "Airi Satou",
-      title: "Accountant",
-      location: "Tokyo",
-      age: 33,
-      date: "2008/11/28",
-      salary: "$162,700",
-      o: "o",
-    },
-    {
-      name: "Brielle Williamson",
-      title: "Integration Specialist",
-      location: "New York",
-      age: 61,
-      date: "2012/12/02",
-      salary: "$372,000",
-      o: "o",
-    },
-    {
-      name: "Herrod Chandler",
-      title: "Sales Assistant",
-      location: "San Francisco",
-      age: 59,
-      date: "2012/08/06",
-      salary: "$137,500",
-      o: "o",
-    },
-    {
-      name: "Rhona Davidson",
-      title: "Integration Specialist",
-      location: "Tokyo",
-      age: 55,
-      date: "2010/10/14",
-      salary: "$327,900",
-      o: "o",
-    },
-    {
-      name: "Colleen Hurst",
-      title: "Javascript Developer",
-      location: "San Francisco",
-      age: 39,
-      date: "2009/09/15",
-      salary: "$205,500",
-      o: "o",
-    },
-    {
-      name: "Sonya Frost",
-      title: "Software Engineer",
-      location: "Edinburgh",
-      age: 23,
-      date: "2008/12/13",
-      salary: "$103,600",
-      o: "o",
-    },
-    {
-      name: "Jena Gaines",
-      title: "Office Manager",
-      location: "London",
-      age: 30,
-      date: "2008/12/19",
-      salary: "$90,560",
-      o: "o",
-    },
-    {
-      name: "Quinn Flynn",
-      title: "Support Lead",
-      location: "Edinburgh",
-      age: 22,
-      date: "2013/03/03",
-      salary: "$342,000",
-      o: "o",
-    },
-    {
-      name: "Charde Marshall",
-      title: "Regional Director",
-      location: "San Francisco",
-      age: 36,
-      date: "2008/10/16",
-      salary: "$470,600",
-      o: "o",
-    },
-    {
-      name: "Haley Kennedy",
-      title: "Senior Marketing Designer",
-      location: "London",
-      age: 43,
-      date: "2012/12/18",
-      salary: "$313,500",
-      o: "o",
-    },
-    {
-      name: "Tatyana Fitzpatrick",
-      title: "Regional Director",
-      location: "London",
-      age: 19,
-      date: "2010/03/17",
-      salary: "$385,750",
-      o: "1",
-    },
-    {
-      name: "Michael Silva",
-      title: "Marketing Designer",
-      location: "London",
-      age: 66,
-      date: "2012/11/27",
-      salary: "$198,500",
-      o: "1",
-    },
-    {
-      name: "Paul Byrd",
-      title: "Chief Financial Officer (CFO)",
-      location: "New York",
-      age: 64,
-      date: "2010/06/09",
-      salary: "$725,000",
-      o: "1",
-    },
-    {
-      name: "Gloria Little",
-      title: "Systems Administrator",
-      location: "New York",
-      age: 59,
-      date: "2009/04/10",
-      salary: "$237,500",
-      o: "1",
-    },
-    {
-      name: "Bradley Greer",
-      title: "Software Engineer",
-      location: "London",
-      age: 41,
-      date: "2012/10/13",
-      salary: "$132,000",
-      o: "1",
-    },
-    {
-      name: "Dai Rios",
-      title: "Personnel Lead",
-      location: "Edinburgh",
-      age: 35,
-      date: "2012/09/26",
-      salary: "$217,500",
-      o: "1",
-    },
-    {
-      name: "Jenette Caldwell",
-      title: "Development Lead",
-      location: "New York",
-      age: 30,
-      date: "2011/09/03",
-      salary: "$345,000",
-      o: "1",
-    },
-    {
-      name: "Yuri Berry",
-      title: "Chief Marketing Officer (CMO)",
-      location: "New York",
-      age: 40,
-      date: "2009/06/25",
-      salary: "$675,000",
-      o: "1",
-    },
-    {
-      name: "Caesar Vance",
-      title: "Pre-Sales Support",
-      location: "New York",
-      age: 21,
-      date: "2011/12/12",
-      salary: "$106,450",
-      o: "1",
-    },
-    {
-      name: "Doris Wilder",
-      title: "Sales Assistant",
-      location: "Sidney",
-      age: 23,
-      date: "2010/09/20",
-      salary: "$85,600",
-      o: "1",
-    },
-    {
-      name: "Angelica Ramos",
-      title: "Chief Executive Officer (CEO)",
-      location: "London",
-      age: 47,
-      date: "2009/10/09",
-      salary: "$1,200,000",
-      o: "1",
-    },
-    {
-      name: "Gavin Joyce",
-      title: "Developer",
-      location: "Edinburgh",
-      age: 42,
-      date: "2010/12/22",
-      salary: "$92,575",
-      o: "1",
-    },
-    {
-      name: "Jennifer Chang",
-      title: "Regional Director",
-      location: "Singapore",
-      age: 28,
-      date: "2010/11/14",
-      salary: "$357,650",
-      o: "1",
-    },
-    {
-      name: "Brenden Wagner",
-      title: "Software Engineer",
-      location: "San Francisco",
-      age: 28,
-      date: "2011/06/07",
-      salary: "$206,850",
-      o: "1",
-    },
-    {
-      name: "Fiona Green",
-      title: "Chief Operating Officer (COO)",
-      location: "San Francisco",
-      age: 48,
-      date: "2010/03/11",
-      salary: "$850,000",
-      o: "1",
-    },
-    {
-      name: "Shou Itou",
-      title: "Regional Marketing",
-      location: "Tokyo",
-      age: 20,
-      date: "2011/08/14",
-      salary: "$163,000",
-      o: "1",
-    },
-    {
-      name: "Michelle House",
-      title: "Integration Specialist",
-      location: "Sidney",
-      age: 37,
-      date: "2011/06/02",
-      salary: "$95,400",
-      o: "1",
-    },
-    {
-      name: "Suki Burks",
-      title: "Developer",
-      location: "London",
-      age: 53,
-      date: "2009/10/22",
-      salary: "$114,500",
-      o: "1",
-    },
-    {
-      name: "Prescott Bartlett",
-      title: "Technical Author",
-      location: "London",
-      age: 27,
-      date: "2011/05/07",
-      salary: "$145,000",
-      o: "1",
-    },
-    {
-      name: "Gavin Cortez",
-      title: "Team Leader",
-      location: "San Francisco",
-      age: 22,
-      date: "2008/10/26",
-      salary: "$235,500",
-      o: "1",
-    },
-    {
-      name: "Martena Mccray",
-      title: "Post-Sales support",
-      location: "Edinburgh",
-      age: 46,
-      date: "2011/03/09",
-      salary: "$324,050",
-      o: "1",
-    },
-    {
-      name: "Unity Butler",
-      title: "Marketing Designer",
-      location: "San Francisco",
-      age: 47,
-      date: "2009/12/09",
-      salary: "$85,675",
-      o: "6",
-    },
-    {
-      name: "Howard Hatfield",
-      title: "Office Manager",
-      location: "San Francisco",
-      age: 51,
-      date: "2008/12/16",
-      salary: "$164,500",
-      o: "6",
-    },
-    {
-      name: "Hope Fuentes",
-      title: "Secretary",
-      location: "San Francisco",
-      age: 41,
-      date: "2010/02/12",
-      salary: "$109,850",
-      o: "6",
-    },
-    {
-      name: "Vivian Harrell",
-      title: "Financial Controller",
-      location: "San Francisco",
-      age: 62,
-      date: "2009/02/14",
-      salary: "$452,500",
-      o: "6",
-    },
-    {
-      name: "Timothy Mooney",
-      title: "Office Manager",
-      location: "London",
-      age: 37,
-      date: "2008/12/11",
-      salary: "$136,200",
-      o: "6",
-    },
-    {
-      name: "Jackson Bradshaw",
-      title: "Director",
-      location: "New York",
-      age: 65,
-      date: "2008/09/26",
-      salary: "$645,750",
-      o: "6",
-    },
-    {
-      name: "Olivia Liang",
-      title: "Support Engineer",
-      location: "Singapore",
-      age: 64,
-      date: "2011/02/03",
-      salary: "$234,500",
-      o: "6",
-    },
-    {
-      name: "Bruno Nash",
-      title: "Software Engineer",
-      location: "London",
-      age: 38,
-      date: "2011/05/03",
-      salary: "$163,500",
-      o: "6",
-    },
-    {
-      name: "Sakura Yamamoto",
-      title: "Support Engineer",
-      location: "Tokyo",
-      age: 37,
-      date: "2009/08/19",
-      salary: "$139,575",
-      o: "6",
-    },
-    {
-      name: "Thor Walton",
-      title: "Developer",
-      location: "New York",
-      age: 61,
-      date: "2013/08/11",
-      salary: "$98,540",
-      o: "6",
-    },
-    {
-      name: "Finn Camacho",
-      title: "Support Engineer",
-      location: "San Francisco",
-      age: 47,
-      date: "2009/07/07",
-      salary: "$87,500",
-      o: "6",
-    },
-    {
-      name: "Serge Baldwin",
-      title: "Data Coordinator",
-      location: "Singapore",
-      age: 64,
-      date: "2012/04/09",
-      salary: "$138,575",
-      o: "6",
-    },
-    {
-      name: "Zenaida Frank",
-      title: "Software Engineer",
-      location: "New York",
-      age: 63,
-      date: "2010/01/04",
-      salary: "$125,250",
-      o: "6",
-    },
-    {
-      name: "Zorita Serrano",
-      title: "Software Engineer",
-      location: "San Francisco",
-      age: 56,
-      date: "2012/06/01",
-      salary: "$115,000",
-      o: "6",
-    },
-    {
-      name: "Jennifer Acosta",
-      title: "Junior Javascript Developer",
-      location: "Edinburgh",
-      age: 43,
-      date: "2013/02/01",
-      salary: "$75,650",
-      o: "6",
-    },
-    {
-      name: "Cara Stevens",
-      title: "Sales Assistant",
-      location: "New York",
-      age: 46,
-      date: "2011/12/06",
-      salary: "$145,600",
-      o: "6",
-    },
-    {
-      name: "Hermione Butler",
-      title: "Regional Director",
-      location: "London",
-      age: 47,
-      date: "2011/03/21",
-      salary: "$356,250",
-      o: "6",
-    },
-    {
-      name: "Lael Greer",
-      title: "Systems Administrator",
-      location: "London",
-      age: 21,
-      date: "2009/02/27",
-      salary: "$103,500",
-      o: "6",
-    },
-    {
-      name: "Jonas Alexander",
-      title: "Developer",
-      location: "San Francisco",
-      age: 30,
-      date: "2010/07/14",
-      salary: "$86,500",
-      o: "6",
-    },
-    {
-      name: "Shad Decker",
-      title: "Regional Director",
-      location: "Edinburgh",
-      age: 51,
-      date: "2008/11/13",
-      salary: "$183,000",
-      o: "6",
-    },
-    {
-      name: "Michael Bruce",
-      title: "Javascript Developer",
-      location: "Singapore",
-      age: 29,
-      date: "2011/06/27",
-      salary: "$183,000",
-      o: "6",
-    },
-    {
-      name: "Donna Snider",
-      title: "Customer Support",
-      location: "New York",
-      age: 27,
-      date: "2011/01/25",
-      salary: "$112,000",
-      o: "6",
-    },
+    [
+      "ConcertAI",
+      "DAY-1",
+      "2023-08-28 14:50:05",
+      "08-28-2023 10:50:05",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-1",
+      "2023-08-28 14:33:01",
+      "08-28-2023 10:33:01",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-1",
+      "2023-08-28 10:38:37",
+      "08-28-2023 06:38:37",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-1",
+      "2023-08-28 07:39:09",
+      "08-28-2023 03:39:09",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-7",
+      "2023-08-27 14:35:02",
+      "08-27-2023 10:35:02",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-7",
+      "2023-08-27 09:12:35",
+      "08-27-2023 05:12:35",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-7",
+      "2023-08-27 07:41:44",
+      "08-27-2023 03:41:44",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-6",
+      "2023-08-26 14:35:19",
+      "08-26-2023 10:35:19",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-6",
+      "2023-08-26 09:22:56",
+      "08-26-2023 05:22:56",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-6",
+      "2023-08-26 07:43:29",
+      "08-26-2023 03:43:29",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Custom NBRxW",
+      "DAY-5",
+      "2023-08-25 19:45:41",
+      "08-25-2023 15:45:41",
+      "WEEKLY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA SOBW",
+      "DAY-5",
+      "2023-08-25 19:35:28",
+      "08-25-2023 15:35:28",
+      "WEEKLY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-5",
+      "2023-08-25 14:32:56",
+      "08-25-2023 10:32:56",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-5",
+      "2023-08-25 09:18:16",
+      "08-25-2023 05:18:16",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-5",
+      "2023-08-25 07:40:09",
+      "08-25-2023 03:40:09",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "ConcertAI",
+      "DAY-5",
+      "2023-08-25 06:03:47",
+      "08-25-2023 02:03:47",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-4",
+      "2023-08-24 14:33:03",
+      "08-24-2023 10:33:03",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-4",
+      "2023-08-24 09:35:47",
+      "08-24-2023 05:35:47",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-4",
+      "2023-08-24 07:53:17",
+      "08-24-2023 03:53:17",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "ConcertAI",
+      "DAY-4",
+      "2023-08-24 05:41:19",
+      "08-24-2023 01:41:19",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Plantrak - ADW",
+      "DAY-3",
+      "2023-08-23 14:38:55",
+      "08-23-2023 10:38:55",
+      "WEEKLY",
+      "UNHEALTHY",
+      "True",
+      "2"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-3",
+      "2023-08-23 14:33:05",
+      "08-23-2023 10:33:05",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-3",
+      "2023-08-23 09:15:14",
+      "08-23-2023 05:15:14",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-3",
+      "2023-08-23 07:41:36",
+      "08-23-2023 03:41:36",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ]
+    ,
+    [
+      "ConcertAI",
+      "DAY-1",
+      "2023-08-28 14:50:05",
+      "08-28-2023 10:50:05",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-1",
+      "2023-08-28 14:33:01",
+      "08-28-2023 10:33:01",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-1",
+      "2023-08-28 10:38:37",
+      "08-28-2023 06:38:37",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-1",
+      "2023-08-28 07:39:09",
+      "08-28-2023 03:39:09",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-7",
+      "2023-08-27 14:35:02",
+      "08-27-2023 10:35:02",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-7",
+      "2023-08-27 09:12:35",
+      "08-27-2023 05:12:35",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-7",
+      "2023-08-27 07:41:44",
+      "08-27-2023 03:41:44",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-6",
+      "2023-08-26 14:35:19",
+      "08-26-2023 10:35:19",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-6",
+      "2023-08-26 09:22:56",
+      "08-26-2023 05:22:56",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-6",
+      "2023-08-26 07:43:29",
+      "08-26-2023 03:43:29",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Custom NBRxW",
+      "DAY-5",
+      "2023-08-25 19:45:41",
+      "08-25-2023 15:45:41",
+      "WEEKLY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA SOBW",
+      "DAY-5",
+      "2023-08-25 19:35:28",
+      "08-25-2023 15:35:28",
+      "WEEKLY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-5",
+      "2023-08-25 14:32:56",
+      "08-25-2023 10:32:56",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-5",
+      "2023-08-25 09:18:16",
+      "08-25-2023 05:18:16",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-5",
+      "2023-08-25 07:40:09",
+      "08-25-2023 03:40:09",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "ConcertAI",
+      "DAY-5",
+      "2023-08-25 06:03:47",
+      "08-25-2023 02:03:47",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-4",
+      "2023-08-24 14:33:03",
+      "08-24-2023 10:33:03",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-4",
+      "2023-08-24 09:35:47",
+      "08-24-2023 05:35:47",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-4",
+      "2023-08-24 07:53:17",
+      "08-24-2023 03:53:17",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "ConcertAI",
+      "DAY-4",
+      "2023-08-24 05:41:19",
+      "08-24-2023 01:41:19",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "IQVIA Plantrak - ADW",
+      "DAY-3",
+      "2023-08-23 14:38:55",
+      "08-23-2023 10:38:55",
+      "WEEKLY",
+      "UNHEALTHY",
+      "True",
+      "2"
+    ],
+    [
+      "IQVIA Valuetrak",
+      "DAY-3",
+      "2023-08-23 14:33:05",
+      "08-23-2023 10:33:05",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Cardinal 3PL",
+      "DAY-3",
+      "2023-08-23 09:15:14",
+      "08-23-2023 05:15:14",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ],
+    [
+      "Veeva",
+      "DAY-3",
+      "2023-08-23 07:41:36",
+      "08-23-2023 03:41:36",
+      "DAILY",
+      "HEALTHY",
+      "False",
+      "0"
+    ]
+
   ];
+
 
   // Now you can use the tableData array of objects in your application.
 
@@ -580,8 +553,9 @@ function SourceSummary() {
     setAnchorEl(null)
     setIsOpen(open);
   };
+
   const data = {
-    labels: ['Table 1', 'Table 2', 'Table 3', 'Table 4', 'Table 5'],
+    labels: ['CARDINAL_REPORT_INVENTORY', 'VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C', 'VEEVA_CRM_CYCLE_PLAN_VOD__C', 'VEEVA_CRM_USER', 'VEEVA_CRM_ACCOUNT'],
     datasets: [
       {
         label: 'Pass',
@@ -589,7 +563,7 @@ function SourceSummary() {
         borderColor: 'transparent',
         borderWidth: 2,
         data: [12, 19, 3, 5, 2],
-        barThickness: 20,
+        barThickness: 10,
       },
       {
         label: 'Fail',
@@ -597,7 +571,7 @@ function SourceSummary() {
         borderColor: 'transparent',
         borderWidth: 2,
         data: [8, 15, 6, 10, 4],
-        barThickness: 20,
+        barThickness: 10,
       },
       {
         label: 'Warning',
@@ -605,22 +579,27 @@ function SourceSummary() {
         borderColor: 'transparent',
         borderWidth: 2,
         data: [5, 12, 8, 6, 14],
-        barThickness: 20,
-      },
-    ],
-  };
+        barThickness: 10,
+      }],
+  }
 
   // Chart options
   const options = {
-    indexAxis: 'x', // Set the index axis to 'y' for vertical bars
+    type: 'bar',
+    indexAxis: 'y', // Set the index axis to 'y' for vertical bars
+    // scales: {
+    //   x: {
+    //     beginAtZero: true,
+    //   },
+    //   y: {
+    //     beginAtZero: true,
+    //   },
+    // },
     scales: {
-      x: {
-        beginAtZero: true,
-      },
-      y: {
-        beginAtZero: true,
-      },
-    },
+      xAxes: [{
+        barThickness: 10
+      }]
+    }
   };
   return (
     <div className='px-3 mt-4'>
@@ -641,13 +620,13 @@ function SourceSummary() {
             tableData?.map((ele) => {
               return (
                 <tr>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.name}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.title}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.location}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.age}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.date}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.salary}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.o}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[0]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[1]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[2]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[3]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[4]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[5]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[6]}</td>
                 </tr>
               )
             })
@@ -677,7 +656,7 @@ function SourceSummary() {
           vertical: 'center', // Center vertically
           horizontal: 'left', // Align to the left side
         }}
-        style={{borderRadius:"5px"}}
+        style={{ borderRadius: "5px" }}
       >
         <Typography style={popoverStyle} >
           <div>
@@ -696,10 +675,12 @@ function SourceSummary() {
         open={isOpen}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
-        PaperProps={{ style: { width: "50%" } }}
+        PaperProps={{ style: { width: "55%" } }}
+        transitionDuration={1000}
       >
         <div role="presentation">
           <div className='p-5'>
+            <p className='adq-source'>Source Summary Dashboard</p>
             <Bar data={data} options={options} width={100} height={40} />
             <div className="mt-3"><SourceTableView ></SourceTableView></div>
           </div>

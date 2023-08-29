@@ -18,7 +18,7 @@ function Home() {
                 "Cardinal 3PL", "IQVIA Valuetrak", "ConcertAI", "PDRP"
             ],
             datasets: [{
-                label: 'Fail',
+                label: 'Source-Fail',
                 data: [
                     12, 19, 3, 5,
                     2, 3, 12, 19,

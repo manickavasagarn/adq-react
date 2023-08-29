@@ -4,6 +4,7 @@ import '../css/animate.css';
 import logo from '../images/DataAces_logo.png'
 import Home from './Home';
 import { useEffect } from 'react';
+import Coming from './Coming';
 
 function NavBar() {
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
@@ -24,7 +25,7 @@ function NavBar() {
                 break;
             // Add other cases here
             default:
-                setTabContent(null)
+                setTabContent(<Coming></Coming>)
         }
     }, [currentActiveTab])
 
