@@ -1374,14 +1374,14 @@ function SourceSummary() {
           {
             tableData?.map((ele) => {
               return (
-                <tr>
+                <tr className={ele[5] == "UNHEALTHY" ? 'bg-custom' : null} >
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[0]}</td>
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[1]}</td>
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[2]}</td>
-                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[3]}</td>
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[4]}</td>
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[5]}</td>
                   <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[6]}</td>
+                  <td onClick={(e) => handleClick(e, ele)} variant="contained">{ele?.[7]}</td>
                 </tr>
               )
             })

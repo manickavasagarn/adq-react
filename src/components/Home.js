@@ -57,8 +57,8 @@ function Home() {
     return (
         <div className='p-4 mt-5'>
             <div className='row mb-3'>
-                <div className='col-8'></div>
-                <div className='col-4 ps-3 adq-source'>
+                <div className='col-7'></div>
+                <div className='col-5 ps-3 adq-source'>
                     <div>
                         <div className='d-flex h-100 align-items-center'>
                             <p className='mb-0' style={{ fontSize: '14px' }}>Look Back Period : </p>
@@ -66,7 +66,8 @@ function Home() {
                             <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
                             <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
                             <button type="button" className={`adq-button ${lookback === '4' ? 'active' : ''}`} onClick={() => { toggleLookback('4'); }} >Custom</button>
-                        </div>
+                            <input type='text' placeholder='Enter' className='form-control ms-1' style={{width:'13%',height:'26px'}}></input>
+                         </div>
                         {
                             lookback === '4' ?
                                 <div className='row '>

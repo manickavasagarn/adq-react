@@ -39,7 +39,7 @@ function SourceTableView() {
             "08-28-2023 10:50:05",
             "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
             "Row Count Validation",
-            "pass",
+            "fail",
             "0"
         ],
         [
@@ -199,7 +199,7 @@ function SourceTableView() {
                         {
                             tableData?.map((ele) => {
                                 return (
-                                    <tr>
+                                    <tr className={ele[4] == "fail" ? 'bg-custom' : null}>
                                         <td >{ele?.[0]}</td>
                                         <td >{ele?.[1]}</td>
                                         <td >{ele?.[2]}</td>

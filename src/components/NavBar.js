@@ -86,6 +86,20 @@ function NavBar() {
                                 </a>
                                 <div class="dropdown-menu  dropdown-menu-end animated zoomIn" aria-labelledby="navbarDropdown">
                                     <p className='d-flex justify-content-center fw-bold'>Demo User</p>
+
+                                    <div class="dropdown-divider"></div>
+                                    <div className='px-2 '>
+                                        <select className='form-control'  onChange={() => { toggle('1'); }}>
+                                            <option value=""> Select Project</option>
+                                            <option value="LEO">Leo Pharma</option>
+                                            <option value="UROVANT" selected>Urovant Pharma</option>
+                                            <option value="TRAIL1">trail1</option>
+                                            <option value="DATABRICKS_DEMO">Demo databricks</option>
+                                            <option value="DE">DE</option>
+                                            <option value="TESTTEST">TESTTEST</option>
+                                        </select>
+                                    </div>
+
                                     <a class="dropdown-item" >Profile</a>
                                     <a class="dropdown-item" >Settings</a>
                                     <div class="dropdown-divider"></div>
