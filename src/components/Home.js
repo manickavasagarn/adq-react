@@ -57,16 +57,19 @@ function Home() {
     return (
         <div className='p-4 mt-5'>
             <div className='row mb-3'>
-                <div className='col-9'></div>
-                <div className='col-3 ps-3 adq-source'>
-                    <p>Look Back Period</p>
-                    <button type="button" className={`adq-button ${lookback === '1' ? 'active' : ''}`} onClick={() => { toggleLookback('1'); }}>1 Week</button>
-                    <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
-                    <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
-                    <button type="button" className={`adq-button ${lookback === '4' ? 'active' : ''}`} onClick={() => { toggleLookback('4'); }} >Custom</button>
+                <div className='col-8'></div>
+                <div className='col-4 ps-3 adq-source'>
+                    <div>
+                    <div className='d-flex h-100 align-items-center'>
+                        <p className='mb-0'>Look Back Period : </p>
+                        <button type="button" className={`adq-button ${lookback === '1' ? 'active' : ''}`} onClick={() => { toggleLookback('1'); }}>1 Week</button>
+                        <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
+                        <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
+                        <button type="button" className={`adq-button ${lookback === '4' ? 'active' : ''}`} onClick={() => { toggleLookback('4'); }} >Custom</button>
+                    </div>
                     {
                         lookback === '4' ?
-                            <div className='row mt-1'>
+                            <div className='row '>
                                 <div className='col-6 '>
                                     <label className='fs-6'>Start Date</label>
                                     <input type="date" className='form-control w-100'></input>
@@ -78,6 +81,7 @@ function Home() {
                             </div>
                             : null
                     }
+                    </div>
                 </div>
             </div>
             <div className='d-flex justify-content-between'>
@@ -89,7 +93,7 @@ function Home() {
                                 <p className='mb-0'>Total Checks</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-check adq-icon" style={{color:"blue"}}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-check adq-icon" style={{ color: "blue" }}></i></div>
                             </div>
                         </div>
                     </div>
@@ -102,7 +106,7 @@ function Home() {
                                 <p className='mb-0'>Total Passed</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-up adq-icon"  style={{color:"mediumseagreen"}}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-up adq-icon" style={{ color: "mediumseagreen" }}></i></div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +119,7 @@ function Home() {
                                 <p className='mb-0'>Total Fails</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-down adq-icon"  style={{color:"red"}}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-down adq-icon" style={{ color: "red" }}></i></div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +132,7 @@ function Home() {
                                 <p className='mb-0'>Total Warnings</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-triangle-exclamation adq-icon"  style={{color:"#dcdc22"}}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-triangle-exclamation adq-icon" style={{ color: "#dcdc22" }}></i></div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +145,7 @@ function Home() {
                                 <p className='mb-0'>Total Invalid</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-xmark adq-icon"  style={{color:"orange"}}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-xmark adq-icon" style={{ color: "orange" }}></i></div>
                             </div>
                         </div>
                     </div>
