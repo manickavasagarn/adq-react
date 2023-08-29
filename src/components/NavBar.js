@@ -13,21 +13,25 @@ function NavBar() {
         if (currentActiveTab !== tab) {
             setCurrentActiveTab(tab);
         }
+        const dropdownToggle = document.querySelector('.dropdown-menu.show');
+        console.log(dropdownToggle);
+        if (dropdownToggle) {
+            dropdownToggle.classList.remove('show');
+        }
     }
 
-    const onItemClick = (e) => {
-        console.log(e)
-    };
+
     useEffect(() => {
         switch (currentActiveTab) {
             case '1':
                 setTabContent(<Home></Home>);
                 break;
-            // Add other cases here
             default:
                 setTabContent(<Coming></Coming>)
         }
     }, [currentActiveTab])
+
+    //dropdown
 
 
     return (
@@ -57,8 +61,8 @@ function NavBar() {
                                         <i class="fa-solid fa-viruses"></i>&nbsp; Rules
                                     </a>
                                     <ul class="dropdown-menu animated zoomIn" >
-                                        <li><a class="dropdown-item" onClick={ onItemClick } >Table Rules</a></li>
-                                        <li><a class="dropdown-item" >Metric Rules</a></li>
+                                        <li><a class="dropdown-item" onClick={() => { toggle('4'); }} >Table Rules</a></li>
+                                        <li><a class="dropdown-item" onClick={() => { toggle('4'); }}>Metric Rules</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown">
@@ -66,8 +70,8 @@ function NavBar() {
                                         <i class="fa-solid fa-bars"></i>&nbsp;Dashboard
                                     </a>
                                     <ul class="dropdown-menu animated zoomIn">
-                                        <li><a class="dropdown-item" >Table  Dashboard</a></li>
-                                        <li><a class="dropdown-item" >Metric  Dashboard</a></li>
+                                        <li><a class="dropdown-item" onClick={() => { toggle('5'); }}>Table  Dashboard</a></li>
+                                        <li><a class="dropdown-item" onClick={() => { toggle('5'); }}>Metric  Dashboard</a></li>
                                     </ul>
                                 </li>
                             </ul>

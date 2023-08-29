@@ -41,7 +41,7 @@ function DataVintage() {
             "08-29-2023 01:36:32",
             "ConcertAI",
             "Fact SP",
-            "SP Patient",
+            "SP Patient ",
             "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
             "SP_HUB_TRANSACTIONS_BASE",
             "01-31-2022",
@@ -54,7 +54,7 @@ function DataVintage() {
             "08-29-2023 01:35:40",
             "ConcertAI",
             "Fact HUB",
-            "HUB Patient",
+            "HUB Patient ",
             "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
             "SP_HUB_TRANSACTIONS_BASE",
             "01-31-2022",
@@ -62,6 +62,17 @@ function DataVintage() {
             "Patient detail, RX for Adbry in HUB",
             "Daily",
             "Daily"
+        ],
+        [
+            "08-29-2023 00:31:34",
+            "IQVIA NSP",
+            "National Sales Perspective",
+            "NSP_MONTHLY",
+            "NSP_BASE",
+            "08-30-2017",
+            "07-30-2023",
+            "Monthly",
+            "Monthly"
         ],
         [
             "08-28-2023 23:32:54",
@@ -90,6 +101,71 @@ function DataVintage() {
             "Thu"
         ],
         [
+            "08-28-2023 20:00:00",
+            "Veeva",
+            "Segment",
+            "Segment alignment",
+            "VEEVA_CRM_ACCOUNT",
+            "CALL_PLAN_BASE",
+            "03-24-2020",
+            "08-27-2023",
+            "Account and Segment inforamation",
+            "Daily",
+            "wed"
+        ],
+        [
+            "08-28-2023 20:00:00",
+            "Veeva",
+            "Target",
+            "Target count",
+            "VEEVA_CRM_CYCLE_PLAN_TARGET_VOD__C",
+            "CALL_PLAN_BASE",
+            "08-29-2019",
+            "08-14-2023",
+            "Target set based on the reps for the quarterly level",
+            "Quarterly",
+            "wed"
+        ],
+        [
+            "08-28-2023 20:00:00",
+            "Veeva",
+            "TOT",
+            "Time off terriory",
+            "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C",
+            "TOT_BASE",
+            "09-10-2019",
+            "08-27-2023",
+            "Tracks reps quantity of time off",
+            "Daily",
+            "wed"
+        ],
+        [
+            "08-28-2023 20:00:00",
+            "Veeva",
+            "Calls",
+            "Calls details",
+            "VEEVA_CRM_CALL2_VOD__C",
+            "CALL_ACTIVITY_BASE",
+            "09-01-2019",
+            "08-27-2023",
+            "Tracks the calls made by the reps",
+            "Daily",
+            "wed"
+        ],
+        [
+            "08-28-2023 20:00:00",
+            "Veeva",
+            "Samples",
+            "Samples details",
+            "VEEVA_CRM_CALL2_SAMPLE_VOD__C",
+            "SAMPLES_BASE",
+            "09-01-2019",
+            "08-27-2023",
+            "Details regarding the samples provided by reps",
+            "Daily",
+            "wed"
+        ],
+        [
             "08-28-2023 10:32:25",
             "IQVIA Valuetrak",
             "Valuecentric",
@@ -106,7 +182,7 @@ function DataVintage() {
             "08-28-2023 07:11:32",
             "IQVIA NPAW",
             "NPA Weekly",
-            "NPA",
+            "NPA ",
             "NPA_RX_WEEKLY",
             "NPA_RX_BASE",
             "08-12-2021",
@@ -114,71 +190,6 @@ function DataVintage() {
             "National level transactions",
             "Weekly",
             "Mon"
-        ],
-        [
-            "08-27-2023 20:00:00",
-            "Veeva",
-            "Segment",
-            "Segment alignment",
-            "VEEVA_CRM_ACCOUNT",
-            "CALL_PLAN_BASE",
-            "03-24-2020",
-            "08-26-2023",
-            "Account and Segment information",
-            "Daily",
-            "Wed"
-        ],
-        [
-            "08-27-2023 20:00:00",
-            "Veeva",
-            "Target",
-            "Target count",
-            "VEEVA_CRM_CYCLE_PLAN_TARGET_VOD__C",
-            "CALL_PLAN_BASE",
-            "08-29-2019",
-            "08-14-2023",
-            "Target set based on the reps for the quarterly level",
-            "Quarterly",
-            "Wed"
-        ],
-        [
-            "08-27-2023 20:00:00",
-            "Veeva",
-            "TOT",
-            "Time off territory",
-            "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C",
-            "TOT_BASE",
-            "09-10-2019",
-            "08-24-2023",
-            "Tracks reps quantity of time off",
-            "Daily",
-            "Wed"
-        ],
-        [
-            "08-27-2023 20:00:00",
-            "Veeva",
-            "Calls",
-            "Calls details",
-            "VEEVA_CRM_CALL2_VOD__C",
-            "CALL_ACTIVITY_BASE",
-            "09-01-2019",
-            "08-26-2023",
-            "Tracks the calls made by the reps",
-            "Daily",
-            "Wed"
-        ],
-        [
-            "08-27-2023 20:00:00",
-            "Veeva",
-            "Samples",
-            "Samples details",
-            "VEEVA_CRM_CALL2_SAMPLE_VOD__C",
-            "SAMPLES_BASE",
-            "09-01-2019",
-            "08-24-2023",
-            "Details regarding the samples provided by reps",
-            "Daily",
-            "Wed"
         ],
         [
             "08-25-2023 11:31:51",
@@ -189,7 +200,7 @@ function DataVintage() {
             "HCP_NBRX_BASE",
             "01-06-2022",
             "08-10-2023",
-            "AD market NBRx.",
+            "AD market NBRx. ",
             "Weekly",
             "Wed"
         ],
@@ -202,7 +213,6 @@ function DataVintage() {
             "SOB_SWITCH_BASE",
             "01-13-2022",
             "08-10-2023",
-            "",
             "Weekly",
             "Mon"
         ],
@@ -215,7 +225,6 @@ function DataVintage() {
             "SOB_PROJECTED_PATIENTS_BASE",
             "01-06-2022",
             "08-10-2023",
-            "",
             "Weekly",
             "Mon"
         ],
@@ -228,7 +237,6 @@ function DataVintage() {
             "SOB_NBRX_BASE",
             "01-06-2022",
             "08-10-2023",
-            "",
             "Weekly",
             "Mon"
         ],
@@ -290,7 +298,6 @@ function DataVintage() {
             "Plan Hierarchy",
             "Plan hierarchy",
             "PX_PAYERSPINE_PAYER_PLAN_HIERARCHY",
-            "",
             "08-09-2023",
             "08-09-2023",
             "Plan hierarchy",
@@ -301,12 +308,10 @@ function DataVintage() {
             "08-08-2023 01:38:55",
             "MMIT",
             "Payer",
-            "",
             "MMIT_DATAFEED_PLANSCONTROLLER_MCO",
             "FORMULARY_DETAIL",
             "10-31-2020",
             "06-30-2023",
-            "",
             "Monthly",
             "Monthly"
         ],
@@ -319,7 +324,6 @@ function DataVintage() {
             "SOB_SWITCH_BASE",
             "07-30-2022",
             "06-29-2023",
-            "",
             "Monthly",
             "Monthly"
         ],
@@ -332,7 +336,6 @@ function DataVintage() {
             "SOB_PROJECTED_PATIENTS_BASE",
             "07-30-2022",
             "06-29-2023",
-            "",
             "Monthly",
             "Monthly"
         ],
@@ -345,7 +348,7 @@ function DataVintage() {
             "SOB_NBRX_BASE",
             "07-30-2022",
             "06-29-2023",
-            "AD market NBRx.",
+            "AD market NBRx. ",
             "Monthly",
             "Monthly"
         ],
@@ -358,20 +361,7 @@ function DataVintage() {
             "HCP_NBRX_BASE",
             "07-30-2022",
             "06-29-2023",
-            "AD market NBRx.",
-            "Monthly",
-            "Monthly"
-        ],
-        [
-            "07-30-2023 20:31:31",
-            "IQVIA NSP",
-            "National Sales Perspective",
-            "",
-            "NSP_MONTHLY",
-            "NSP_BASE",
-            "07-30-2017",
-            "06-29-2023",
-            "",
+            "AD market NBRx. ",
             "Monthly",
             "Monthly"
         ],
@@ -402,6 +392,54 @@ function DataVintage() {
             "Quarterly"
         ],
         [
+            "06-23-2023 09:23:59",
+            "Cardinal 3PL",
+            "Lot Movement",
+            "Transactions details ",
+            "3PL_LOT_MOVEMENT_BASE",
+            "06-21-2023",
+            "06-21-2023",
+            "Movement in lot",
+            "Daily",
+            "Daily"
+        ],
+        [
+            "06-23-2023 09:23:58",
+            "Cardinal 3PL",
+            "Inventory",
+            "Quantity detail",
+            "3PL_INVENTORY_BASE",
+            "03-27-2023",
+            "06-21-2023",
+            "Quantity in the inventory",
+            "Daily",
+            "Daily"
+        ],
+        [
+            "06-23-2023 09:23:57",
+            "Cardinal 3PL",
+            "Gross Sale",
+            "Gross sales",
+            "3PL_GROSS_SALES_BASE",
+            "06-21-2023",
+            "06-21-2023",
+            "Sales values",
+            "Daily",
+            "Daily"
+        ],
+        [
+            "06-23-2023 09:23:56",
+            "Cardinal 3PL",
+            "Chargeback",
+            "Chargeback quantity detail",
+            "3PL_CHARGEBACK_BASE",
+            "06-21-2023",
+            "06-21-2023",
+            "The wholesaler details for reloading",
+            "Daily",
+            "Daily"
+        ],
+        [
             "05-09-2023 20:00:00",
             "FINANCE",
             "Finance Gross",
@@ -418,7 +456,6 @@ function DataVintage() {
             "02-23-2023 19:00:00",
             "ZOOMRX PET REPORT",
             "Marketing KPIs",
-            "",
             "MKTDB_ZOOM_RESPONSE_DATA",
             "MKTDB_ZOOM_RESPONSE_DATA",
             "03-31-2021",
@@ -431,7 +468,6 @@ function DataVintage() {
             "02-23-2023 19:00:00",
             "ZOOMRX PET REPORT",
             "Marketing KPIs",
-            "",
             "MKTDB_ZOOM_BENCHMARK_DATA",
             "MKTDB_ZOOM_BENCHMARK_DATA",
             "03-31-2020",
@@ -458,7 +494,7 @@ function DataVintage() {
                             <th>Data Type</th>
                             <th>Ref Table Name</th>
                             <th>Target Table Name</th>
-                            <th>Min Date Dataset</th>
+                            <th style={{ width: '10%' }}>Min Date Dataset</th>
                             <th>Max Date Dataset</th>
                             <th>Description</th>
                             <th>Expected Frequency</th>

@@ -12,7 +12,7 @@ function SourceTableView() {
             // Only initialize the DataTable if it hasn't been initialized before
             console.log('Initializing DataTable...');
             const dataTableInstance = $(tableRef.current).DataTable({
-                pageLength : 5,
+                pageLength: 5,
                 lengthChange: false,
                 language: {
                     searchPlaceholder: "Search records",
@@ -20,47 +20,166 @@ function SourceTableView() {
             });
 
             dataTableRef.current = dataTableInstance; // Store the DataTable instance
+            if (dataTableRef.current) {
+                dataTableRef.current.order([1, 'asc']).draw();
+            }
         }
     }, []);
-    const tableData =[
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_CYCLE_PLAN_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_CYCLE_PLAN_VOD__C", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_PRODUCT_VOD__C", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_PRODUCT_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_PRODUCT_VOD__C", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_SENT_EMAIL", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_SENT_EMAIL_OPEN", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_SENT_EMAIL_OPEN", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_SENT_EMAIL_OPEN", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_SENT_EMAIL_OPEN", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Mandatory Fields Check", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Max Length Check", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_CYCLE_PLAN_VOD__C", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Relationship Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_TIME_OFF_TERRITORY_VOD__C", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER", "Mandatory Fields Check", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER", "Relationship Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER_ROLE", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER_ROLE", "Mandatory Fields Check", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER_ROLE", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER_ROLE", "Relationship Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_USER_ROLE", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_CALL2_DETAIL_VOD__C", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ACCOUNT", "Mandatory Fields Check", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ACCOUNT", "Row Count Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Duplicate Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Null Validation", "pass", 0],
-        ["Veeva", "08-23-2023 03:41:36", "VEEVA_CRM_ADDRESS_VOD__C", "Null Validation", "pass", 0]
+    const tableData = [
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Null Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Row Count Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Null Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Mandatory Fields Check",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_SPP_TRANSACTIONS",
+            "Duplicate Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Relationship Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Row Count Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_COPAY_REDEMPTIONS",
+            "Duplicate Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Mandatory Fields Check",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_HUB_TRANSACTIONS",
+            "Duplicate Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_COPAY_REDEMPTIONS",
+            "Row Count Validation",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_COPAY_REDEMPTIONS",
+            "Mandatory Fields Check",
+            "pass",
+            "0"
+        ],
+        [
+            "ConcertAI",
+            "08-28-2023 10:50:05",
+            "CONCERTAI_OUTGOING_COPAY_REDEMPTIONS",
+            "Freshness Validation",
+            "pass",
+            "0"
+        ]
     ]
-    
+
     return (
         <div>
             <h3 className='adq-source'>Table View</h3>
@@ -93,7 +212,7 @@ function SourceTableView() {
                 </tbody>
                 <tfoot>
                     <tr>
-                    <th>Source</th>
+                        <th>Source</th>
                         <th>Run At</th>
                         <th>Table Name</th>
                         <th>Test Name</th>

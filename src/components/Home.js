@@ -13,16 +13,16 @@ function Home() {
         type: 'bar', // Use 'bar' type for horizontal bar chart
         data: {
             labels: [
-                "Cardinal 3PL", "IQVIA Valuetrak", "ConcertAI", "PDRP",
-                "Cardinal 3PL", "IQVIA Valuetrak", "ConcertAI", "PDRP",
-                "Cardinal 3PL", "IQVIA Valuetrak", "ConcertAI", "PDRP"
+                "ConcertAI", "IQVIA Plantrak - ADW", "IQVIA FIA", "IQVIA SOBM",
+                "Cardinal 3PL", "IQVIA Custom NBRxW", "MMIT", "IQVIA NPAW",
+                "IQVIA NPAM", "IQVIA LAAD", "PDRP", "ENOVA Details Report"
             ],
             datasets: [{
                 label: 'Source-Fail',
                 data: [
-                    12, 19, 3, 5,
-                    2, 3, 12, 19,
-                    3, 5, 2, 3
+                    68, 30, 9, 4,
+                    20, 1, 3, 2,
+                    1, 7, 2, 6
                 ],
                 backgroundColor: '#ee6666',
                 barThickness: 10,
@@ -60,27 +60,27 @@ function Home() {
                 <div className='col-8'></div>
                 <div className='col-4 ps-3 adq-source'>
                     <div>
-                    <div className='d-flex h-100 align-items-center'>
-                        <p className='mb-0' style={{fontSize:'14px'}}>Look Back Period : </p>
-                        <button type="button" className={`adq-button ${lookback === '1' ? 'active' : ''}`} onClick={() => { toggleLookback('1'); }}>1 Week</button>
-                        <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
-                        <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
-                        <button type="button" className={`adq-button ${lookback === '4' ? 'active' : ''}`} onClick={() => { toggleLookback('4'); }} >Custom</button>
-                    </div>
-                    {
-                        lookback === '4' ?
-                            <div className='row '>
-                                <div className='col-6 '>
-                                    <label className='fs-6'>Start Date</label>
-                                    <input type="date" className='form-control w-100'></input>
+                        <div className='d-flex h-100 align-items-center'>
+                            <p className='mb-0' style={{ fontSize: '14px' }}>Look Back Period : </p>
+                            <button type="button" className={`adq-button ${lookback === '1' ? 'active' : ''}`} onClick={() => { toggleLookback('1'); }}>1 Week</button>
+                            <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
+                            <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
+                            <button type="button" className={`adq-button ${lookback === '4' ? 'active' : ''}`} onClick={() => { toggleLookback('4'); }} >Custom</button>
+                        </div>
+                        {
+                            lookback === '4' ?
+                                <div className='row '>
+                                    <div className='col-6 '>
+                                        <label className='fs-6'>Start Date</label>
+                                        <input type="date" className='form-control w-100'></input>
+                                    </div>
+                                    <div className=' col-6 '>
+                                        <label className='fs-6'>End Date</label>
+                                        <input type="date" className='form-control w-100'></input>
+                                    </div>
                                 </div>
-                                <div className=' col-6 '>
-                                    <label className='fs-6'>End Date</label>
-                                    <input type="date" className='form-control w-100'></input>
-                                </div>
-                            </div>
-                            : null
-                    }
+                                : null
+                        }
                     </div>
                 </div>
             </div>
@@ -89,8 +89,8 @@ function Home() {
                     <div className='card p-3 adq-card'>
                         <div className='row'>
                             <div className='col-8'>
-                                <span className='counter'>50,000</span>
-                                <p className='mb-0'>Total Checks</p>
+                                <span className='counter'>977</span>
+                                <p className='mb-0'>Checks</p>
                             </div>
                             <div className='col-4'>
                                 <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-check adq-icon" style={{ color: "blue" }}></i></div>
@@ -102,8 +102,8 @@ function Home() {
                     <div className='card p-3 adq-card'>
                         <div className='row'>
                             <div className='col-8'>
-                                <span className='counter'>20,000</span>
-                                <p className='mb-0'>Total Passed</p>
+                                <span className='counter'>875</span>
+                                <p className='mb-0'>Passed</p>
                             </div>
                             <div className='col-4'>
                                 <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-up adq-icon" style={{ color: "mediumseagreen" }}></i></div>
@@ -115,8 +115,8 @@ function Home() {
                     <div className='card p-3 adq-card'>
                         <div className='row'>
                             <div className='col-8'>
-                                <span className='counter'>10,000</span>
-                                <p className='mb-0'>Total Fails</p>
+                                <span className='counter'>59</span>
+                                <p className='mb-0'>Fails</p>
                             </div>
                             <div className='col-4'>
                                 <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-thumbs-down adq-icon" style={{ color: "red" }}></i></div>
@@ -128,8 +128,8 @@ function Home() {
                     <div className='card p-3 adq-card'>
                         <div className='row'>
                             <div className='col-8'>
-                                <span className='counter'>1,000</span>
-                                <p className='mb-0'>Total Warnings</p>
+                                <span className='counter'>34</span>
+                                <p className='mb-0'>Warnings</p>
                             </div>
                             <div className='col-4'>
                                 <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-triangle-exclamation adq-icon" style={{ color: "#dcdc22" }}></i></div>
@@ -141,8 +141,8 @@ function Home() {
                     <div className='card p-3 adq-card'>
                         <div className='row'>
                             <div className='col-8'>
-                                <span className='counter'>1,000</span>
-                                <p className='mb-0'>Total Invalid</p>
+                                <span className='counter'>9</span>
+                                <p className='mb-0'>Invalid</p>
                             </div>
                             <div className='col-4'>
                                 <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-xmark adq-icon" style={{ color: "orange" }}></i></div>
