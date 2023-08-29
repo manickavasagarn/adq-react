@@ -485,59 +485,61 @@ function DataVintage() {
         <>
             <h2 className='adq-source ms-2 mt-3'>Data Vintage by Source and Data Area</h2>
             <div className='px-3 mt-4'>
-                <table id="data-table-basic" class="table table-striped" ref={tableRef}>
-                    <thead>
-                        <tr>
-                            <th>Load Date</th>
-                            <th>Data Source</th>
-                            <th>Data Area</th>
-                            <th>Data Type</th>
-                            <th>Ref Table Name</th>
-                            <th>Target Table Name</th>
-                            <th style={{ width: '10%' }}>Min Date Dataset</th>
-                            <th>Max Date Dataset</th>
-                            <th>Description</th>
-                            <th>Expected Frequency</th>
-                            <th>Curation Day</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            tableData?.map((ele) => {
-                                return (
-                                    <tr>
-                                        <td >{ele?.[0]}</td>
-                                        <td >{ele?.[1]}</td>
-                                        <td >{ele?.[2]}</td>
-                                        <td >{ele?.[3]}</td>
-                                        <td >{ele?.[4]}</td>
-                                        <td >{ele?.[5]}</td>
-                                        <td >{ele?.[6]}</td>
-                                        <td >{ele?.[7]}</td>
-                                        <td >{ele?.[8]}</td>
-                                        <td >{ele?.[9]}</td>
-                                        <td >{ele?.[10]}</td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Load Date</th>
-                            <th>Data Source</th>
-                            <th>Data Area</th>
-                            <th>Data Type</th>
-                            <th>Ref Table Name</th>
-                            <th>Target Table Name</th>
-                            <th>Min Date Dataset</th>
-                            <th>Max Date Dataset</th>
-                            <th>Description</th>
-                            <th>Expected Frequency</th>
-                            <th>Curation Day</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                <div className='table-responsive'>
+                    <table id="data-table-basic" class="table table-striped" ref={tableRef}>
+                        <thead>
+                            <tr>
+                                <th>Load Date</th>
+                                <th>Data Source</th>
+                                <th>Data Area</th>
+                                <th>Data Type</th>
+                                <th>Ref Table Name</th>
+                                <th>Target Table Name</th>
+                                <th>Min Date Dataset</th>
+                                <th>Max Date Dataset</th>
+                                <th>Description</th>
+                                <th>Expected Frequency</th>
+                                <th>Curation Day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                tableData?.map((ele) => {
+                                    return (
+                                        <tr>
+                                            <td >{ele?.[0]}</td>
+                                            <td >{ele?.[1]}</td>
+                                            <td >{ele?.[2]}</td>
+                                            <td className='text-wrap'>{ele?.[3]}</td>
+                                            <td >{ele?.[4]}</td>
+                                            <td >{ele?.[5]}</td>
+                                            <td >{ele?.[6]}</td>
+                                            <td >{ele?.[7]}</td>
+                                            <td >{ele?.[8]}</td>
+                                            <td >{ele?.[9]}</td>
+                                            <td >{ele?.[10]}</td>
+                                        </tr>
+                                    )
+                                })
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Load Date</th>
+                                <th>Data Source</th>
+                                <th>Data Area</th>
+                                <th>Data Type</th>
+                                <th>Ref Table Name</th>
+                                <th>Target Table Name</th>
+                                <th>Min Date Dataset</th>
+                                <th>Max Date Dataset</th>
+                                <th>Description</th>
+                                <th>Expected Frequency</th>
+                                <th>Curation Day</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
 
         </>

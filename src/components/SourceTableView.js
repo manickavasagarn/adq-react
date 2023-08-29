@@ -183,44 +183,46 @@ function SourceTableView() {
     return (
         <div>
             <h3 className='adq-source'>Table View</h3>
-            <table id="data-table-basic" class="table table-striped" ref={tableRef}>
-                <thead>
-                    <tr>
-                        <th>Source</th>
-                        <th>Run At</th>
-                        <th>Table Name</th>
-                        <th>Test Name</th>
-                        <th>Status</th>
-                        <th>Discrepancy Count</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        tableData?.map((ele) => {
-                            return (
-                                <tr>
-                                    <td >{ele?.[0]}</td>
-                                    <td >{ele?.[1]}</td>
-                                    <td >{ele?.[2]}</td>
-                                    <td >{ele?.[3]}</td>
-                                    <td >{ele?.[4]}</td>
-                                    <td >{ele?.[5]}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Source</th>
-                        <th>Run At</th>
-                        <th>Table Name</th>
-                        <th>Test Name</th>
-                        <th>Status</th>
-                        <th>Discrepancy Count</th>
-                    </tr>
-                </tfoot>
-            </table>
+            <div className='table-responsive'>
+                <table id="data-table-basic" class="table table-striped" ref={tableRef}>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Run At</th>
+                            <th>Table Name</th>
+                            <th>Test Name</th>
+                            <th>Status</th>
+                            <th>Discrepancy Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            tableData?.map((ele) => {
+                                return (
+                                    <tr>
+                                        <td >{ele?.[0]}</td>
+                                        <td >{ele?.[1]}</td>
+                                        <td >{ele?.[2]}</td>
+                                        <td >{ele?.[3]}</td>
+                                        <td >{ele?.[4]}</td>
+                                        <td >{ele?.[5]}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Source</th>
+                            <th>Run At</th>
+                            <th>Table Name</th>
+                            <th>Test Name</th>
+                            <th>Status</th>
+                            <th>Discrepancy Count</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     )
 }
