@@ -61,7 +61,7 @@ function Home() {
                 <div className='col-4 ps-3 adq-source'>
                     <div>
                     <div className='d-flex h-100 align-items-center'>
-                        <p className='mb-0'>Look Back Period : </p>
+                        <p className='mb-0' style={{fontSize:'14px'}}>Look Back Period : </p>
                         <button type="button" className={`adq-button ${lookback === '1' ? 'active' : ''}`} onClick={() => { toggleLookback('1'); }}>1 Week</button>
                         <button type="button" className={`adq-button ${lookback === '2' ? 'active' : ''}`} onClick={() => { toggleLookback('2'); }}>1 Month</button>
                         <button type="button" className={`adq-button ${lookback === '3' ? 'active' : ''}`} onClick={() => { toggleLookback('3'); }} >3 Month</button>
