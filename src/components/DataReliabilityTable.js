@@ -4,7 +4,7 @@ import 'datatables.net-dt/css/jquery.dataTables.min.css';
 import 'datatables.net';
 import '../css/Home.css';
 
-function SourceTableView() {
+function DataReliabilityTable() {
     const tableRef = useRef(null);
     const dataTableRef = useRef(null);
     useEffect(() => {
@@ -182,14 +182,12 @@ function SourceTableView() {
 
     return (
         <div>
-            <h3 className='adq-source'>Table View</h3>
             <div className='table-responsive'>
                 <table id="data-table-basic" class="table table-striped" ref={tableRef}>
                     <thead>
                         <tr>
-                            <th>Source</th>
-                            <th>Run At</th>
                             <th>Table Name</th>
+                            <th>Run At</th>
                             <th>Test Name</th>
                             <th>Status</th>
                             <th>Discrepancy Count</th>
@@ -200,9 +198,8 @@ function SourceTableView() {
                             tableData?.map((ele) => {
                                 return (
                                     <tr className={ele[4] == "fail" ? 'bg-custom' : null}>
-                                        <td >{ele?.[0]}</td>
-                                        <td >{ele?.[1]}</td>
                                         <td >{ele?.[2]}</td>
+                                        <td >{ele?.[1]}</td>
                                         <td >{ele?.[3]}</td>
                                         <td >{ele?.[4]}</td>
                                         <td >{ele?.[5]}</td>
@@ -227,4 +224,4 @@ function SourceTableView() {
     )
 }
 
-export default SourceTableView
+export default DataReliabilityTable

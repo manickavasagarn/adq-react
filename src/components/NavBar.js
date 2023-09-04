@@ -5,7 +5,7 @@ import logo from '../images/DataAces_logo.png'
 import Home from './Home';
 import { useEffect } from 'react';
 import Coming from './Coming';
-
+import DataReliability from './DataReliability';
 function NavBar() {
     const [currentActiveTab, setCurrentActiveTab] = useState('1');
     const [tabContent, setTabContent] = useState(<Home></Home>);
@@ -26,6 +26,9 @@ function NavBar() {
             case '1':
                 setTabContent(<Home></Home>);
                 break;
+            case '2':
+                setTabContent(<DataReliability></DataReliability>);
+                break;
             default:
                 setTabContent(<Coming></Coming>)
         }
@@ -41,7 +44,8 @@ function NavBar() {
                     <div className='col-3'>
                         <div className='d-flex'>
                             <img src={logo} width="55" height="auto" className='ms-5'></img>
-                            <p className='adq-name my-auto'>&nbsp; Ace Data Quality</p>
+                            <p className='adq-name my-auto' style={{fontSize:"1.3rem",color: '#031b4e',
+    fontWeight: '700'}}>&nbsp; Ace Data Quality</p>
                         </div>
                     </div>
                     <div className='col-7'>
@@ -89,7 +93,7 @@ function NavBar() {
 
                                     <div class="dropdown-divider"></div>
                                     <div className='px-2 '>
-                                        <select className='form-control'  onChange={() => { toggle('1'); }}>
+                                        <select className='form-control' onChange={() => { toggle('1'); }}>
                                             <option value=""> Select Project</option>
                                             <option value="LEO">Leo Pharma</option>
                                             <option value="UROVANT" selected>Urovant Pharma</option>

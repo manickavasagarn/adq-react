@@ -523,7 +523,7 @@ function DataVintage() {
                                 })
                             }
                         </tbody>
-                        <tfoot>
+                        {/* <tfoot>
                             <tr>
                                 <th>Load Date</th>
                                 <th>Data Source</th>
@@ -537,7 +537,7 @@ function DataVintage() {
                                 <th>Expected Frequency</th>
                                 <th>Curation Day</th>
                             </tr>
-                        </tfoot>
+                        </tfoot> */}
                     </table>
                 </div>
             </div>

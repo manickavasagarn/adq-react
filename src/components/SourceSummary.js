@@ -8,6 +8,7 @@ import '../css/Home.css';
 import { Button, SwipeableDrawer } from '@mui/material';
 import { Bar } from 'react-chartjs-2';
 import SourceTableView from './SourceTableView';
+import axios from 'axios';
 function SourceSummary() {
   const tableRef = useRef(null);
   const dataTableRef = useRef(null); // Store a reference to the DataTable instance
@@ -50,6 +51,19 @@ function SourceSummary() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  useEffect(() => {
+    getSource();
+  }, [])
+
+  const getSource = async () => {
+    try {
+      var data = await axios.get(`/addProjects`);
+      console.log(data);
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   const tableData = [
     [
@@ -1386,18 +1400,7 @@ function SourceSummary() {
               )
             })
           }
-        </tbody>
-        <tfoot>
-          <tr>
-            <th>Source</th>
-            <th>Run Day</th>
-            <th>Run At</th>
-            <th>Frequency</th>
-            <th>Status</th>
-            <th>Source Fail</th>
-            <th>Source Failed Count</th>
-          </tr>
-        </tfoot>
+        </tbody>  
       </table>
       <Popover
         open={Boolean(anchorEl)}

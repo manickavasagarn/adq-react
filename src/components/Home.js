@@ -94,7 +94,7 @@ function Home() {
                                 <p className='mb-0'>Checks</p>
                             </div>
                             <div className='col-4'>
-                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-check adq-icon" style={{ color: "blue" }}></i></div>
+                                <div className='text-center pt-2 d-flex justify-content-center h-100 align-items-center'><i class="fa-solid fa-circle-check adq-icon" style={{ color: "#4da6ff" }}></i></div>
                             </div>
                         </div>
                     </div>
@@ -154,14 +154,14 @@ function Home() {
             </div>
             <div className='card mt-3 pb-3 adq-card'>
                 <div className='row'>
-                    <div className='col-8'>
-                        <h2 className='adq-source ms-2 mt-3'>Source Summary</h2>
-                        <SourceSummary></SourceSummary>
-                    </div>
-                    <div className='col-4'>
+                    <div className='col-4 mt-4'>
                         <div className='mt-5'>
                             <Bar data={data.data} options={data.options} width={100} height={100} />
                         </div>
+                    </div>
+                    <div className='col-8'>
+                        <h2 className='adq-source ms-2 mt-3'>Source Summary</h2>
+                        <SourceSummary></SourceSummary>
                     </div>
                 </div>
             </div>

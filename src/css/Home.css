@@ -4,6 +4,12 @@
     font-weight: 700;
 }
 
+.custom-data-zoom {
+    /* Add your custom styles here */
+    background-color: #852b2b;
+    border: 1px solid #ccc;
+    /* Other styles... */
+}
 .adq-card {
     box-shadow: 1px 0px 5px 0px #e2cdcd;
     border-radius: 5px;
@@ -37,7 +43,7 @@
 }
 
 .adq-button:hover,.adq-button.active{
-    background-color: blue;
+    background-color: #4da6ff;
     color: white;
 }
 
@@ -192,6 +198,7 @@ input[type="search"]::-webkit-search-results-decoration {
 #data-table-basic {
     padding: 20px 0px !important;
     padding-top: 0 !important;
+    border: none !important;
 }
 
 .dataTables_wrapper .dataTables_info,
