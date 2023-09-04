@@ -61,7 +61,7 @@ function DataReliability() {
 
                         <p className='mb-0 d-flex'><div style={{ height: '10px', width: '10px', backgroundColor: '#fac858', marginTop: '8px', marginRight: '2px' }}></div>Warn: {totalWarn}  &nbsp;%</p>
                     </div>
-                    <button onClick={toggleDrawer(true)} className='btn btn-info'>History</button>
+                    <button onClick={toggleDrawer(true)} className='btn' style={{backgroundColor:"#4da6ff",    color: 'white'}}>History</button>
                 </div>
             );
         }
@@ -602,7 +602,7 @@ function DataReliability() {
                     <div className='card  adq-card p-3 h-100'>
                         <div className='d-flex justify-content-between'>
                             <h2 className='adq-source text-center'>Checks By Sources</h2>
-                            <button className='btn btn-sm btn-info h-75 pt-0' onClick={() => setBackgroundColor({ pass: genColor('#5470c6'), fail: genColor('#ee6666'), warning: genColor('#fac858') })}>Reset</button>
+                            <button className='btn btn-sm h-75 pt-0' style={{backgroundColor:"#4da6ff",    color: 'white'}} onClick={() => setBackgroundColor({ pass: genColor('#5470c6'), fail: genColor('#ee6666'), warning: genColor('#fac858') })}>Reset</button>
                         </div>
                         <Bar data={sourceData} options={sourceOptions} width={100} height={110} />
                         <CustomTooltip data={sourceData} />
@@ -657,19 +657,19 @@ function DataReliability() {
                         <div className='col-4 px-1'>
                             <div className='card p-3 adq-card'>
                                 {/* <ChartDataReliability title="Mandatory Field Inspector"></ChartDataReliability> */}
-                                <DataReliabilityTest title="Relationship Validator"></DataReliabilityTest>
+                                <DataReliabilityTest title="Freshness Validation"></DataReliabilityTest>
                             </div>
                         </div>
                         <div className='col-4 px-1'>
                             <div className='card p-3 adq-card'>
                                 {/* <ChartDataReliability title="Relationship Validator"></ChartDataReliability> */}
-                                <DataReliabilityTest title="Relationship Validator"></DataReliabilityTest>
+                                <DataReliabilityTest title="Length Inspector"></DataReliabilityTest>
                             </div>
                         </div>
                         <div className='col-4 px-1'>
                             <div className='card p-3 adq-card'>
                                 {/* <ChartDataReliability title="Relationship Validator"></ChartDataReliability> */}
-                                <DataReliabilityTest title="Relationship Validator"></DataReliabilityTest>
+                                <DataReliabilityTest title="Composite Key Procter"></DataReliabilityTest>
                             </div>
                         </div>
                     </div>
@@ -768,7 +768,7 @@ function DataReliability() {
                         <Bar data={data2} options={options2} width={100} height={20} />
                         <div className='d-flex justify-content-between'>
                             <p className='adq-source'>Incident Table Dashboard</p>
-                            <button class="btn btn-sm btn-info h-75 pt-0" onClick={() => { handleIncident(3, [8]) }}>Reset</button>
+                            <button class="btn btn-sm  h-75 pt-0" style={{backgroundColor:"#4da6ff",    color: 'white'}} onClick={() => { handleIncident(3, [8]) }}>Reset</button>
                         </div>
                         <Bar data={data} options={options} width={100} height={20} />
                         <div className="mt-3">
